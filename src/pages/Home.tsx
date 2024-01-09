@@ -37,7 +37,6 @@ const Home = () => {
       ? publishBooks
       : books;
 
-      
   return (
     <main className="px-10 md:px-32 py-16 min-h-screen flex-grow m-aut ">
       {isLoading && (
@@ -94,7 +93,7 @@ const Home = () => {
       ) : (
         <h1 className="text-black text-base m-auto text-center">
           {watch("search")?.length > 0
-            ? " No books found"
+            ? " No books found or click search btn"
             : "You haven't publish a book yet"}
         </h1>
       )}
