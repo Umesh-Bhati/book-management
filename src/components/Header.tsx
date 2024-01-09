@@ -23,17 +23,17 @@ const Header = () => {
     dispatch(togglePublishBook(e.target.checked));
   }
   return (
-    <header className="fixed top-0 right-0 left-0 z-30">
+    <header className="fixed  top-0 right-0 left-0 z-30">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <div className="flex flex-nowrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center">
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center md:text-xl text-sm font-semibold whitespace-nowrap dark:text-white">
               BookManager
             </span>
           </Link>
-          <div className="flex items-center lg:order-2">
+          <div className="flex  items-center lg:order-2">
             <ToggleBtn
-              lable={isPublished ? "Published" : "All"}
+              lable={isPublished ? "Pub" : "All"}
               handleChange={handleChange}
             />
             <Link

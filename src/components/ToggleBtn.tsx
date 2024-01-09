@@ -7,8 +7,10 @@ interface IToggleBtn {
 
 const ToggleBtn: React.FC<IToggleBtn> = ({ lable, handleChange }) => {
   return (
-    <div className="flex items-center">
-      <h1 className="text-sm text-white font-bold mr-3">{lable}</h1>
+    <div className="flex  items-center">
+      <h1 className="text-sm dark:text-white  text-nowrap font-bold mr-3">
+        {lable}
+      </h1>
       <label className="relative inline-flex items-center cursor-pointer">
         <input
           type="checkbox"
