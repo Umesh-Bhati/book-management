@@ -91,7 +91,7 @@ const Home = () => {
           ))}
         </div>
       ) : (
-        <h1 className="text-black text-base m-auto text-center">
+        <h1 className="text-black text-base m-auto text-center mt-28">
           {watch("search")?.length > 0
             ? " No books found or click search btn"
             : "You haven't publish a book yet"}
