@@ -27,9 +27,11 @@ const userSlice = createSlice({
 		builder.addCase(signup.pending, state => {
 			state.isLoading = true;
 		})
-			.addCase(signup.fulfilled, (state) => {
+			.addCase(signup.fulfilled, (state, action) => {
 				state.isLoading = false;
-				state.isAuthenticated = true
+				if (action.payload?.success) {
+					state.isAuthenticated = true;
+				}
 			})
 			.addCase(signup.rejected, (state, action) => {
 				state.isLoading = false;
@@ -41,9 +43,11 @@ const userSlice = createSlice({
 		builder.addCase(login.pending, state => {
 			state.isLoading = true;
 		})
-			.addCase(login.fulfilled, (state) => {
+			.addCase(login.fulfilled, (state, action) => {
 				state.isLoading = false;
-				state.isAuthenticated = true;
+				if (action.payload?.success) {
+					state.isAuthenticated = true;
+				}
 			})
 			.addCase(login.rejected, (state, action) => {
 				state.isLoading = false;
